@@ -1,0 +1,18 @@
+﻿<Page
+    x:Class="Glow.PaneControls.WeatherPane"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Glow.PaneControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Padding="8">
+        <TextBlock Style="{ThemeResource HeaderTextBlockStyle}" Text="Weather"/>
+        <TextBlock Style="{ThemeResource BaseTextBlockStyle}" Text="What's the weather look like today?"/>
+        <TextBlock Style="{ThemeResource BodyTextBlockStyle}" Text="The weather extension will turn your glow objects into informative and beautiful meteorologist! Todays forecast will be shown on the object in the following order: condition, high, low, wind speed, and humidity" Margin="0,12"/>
+        <TextBlock x:Name="ui_locationText" Style="{ThemeResource BodyTextBlockStyle}" Foreground="{ThemeResource SystemControlBackgroundAccentBrush}" Text="Your Location: " Margin="0,0,0,12"/>
+        <TextBlock Style="{ThemeResource BaseTextBlockStyle}" Text="Enable Weather"/>
+        <ToggleSwitch x:Name="ui_weatherEnabled" Toggled="WeatherEnabled_Toggled"/>
+    </StackPanel>
+</Page>
